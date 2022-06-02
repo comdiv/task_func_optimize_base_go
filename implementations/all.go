@@ -7,6 +7,7 @@ import (
 	"github.com/comdiv/task_func_optimize_base_go/implementations/gavrilov"
 	"github.com/comdiv/task_func_optimize_base_go/implementations/gubkin"
 	"github.com/comdiv/task_func_optimize_base_go/implementations/harisov"
+	"github.com/comdiv/task_func_optimize_base_go/implementations/metelkin"
 	"github.com/comdiv/task_func_optimize_base_go/implementations/pirozhkov"
 	"github.com/comdiv/task_func_optimize_base_go/implementations/tetyuev"
 )
@@ -21,6 +22,7 @@ var AllImplementations = []*basis.FuncDesc{
 	{"tetyuev   v2 (fib[]+math.Pow)", tetyuev.TetyuevSuperFuncImplV2},
 	{"harisov   v1 (fib+SqrtPower)", harisov.MySuperFuncImpl}, // тесты на погрешность не проходят!!!
 	{"gavrilov  v1 (linear)", gavrilov.GavrilovSuperFuncImplV1},
+	{"metelkin  v1 (linear)", metelkin.MetelkinSuperFuncImpl},
 	{"abzaev    v1 (fib+math.Pow)", abzaev.AbzaevSuperFuncImplV1},
 	{"gubkin    v3 (fib[]+CachedPow)", gubkin.GubkinSuperFuncImplV3},
 	{"gubkin    v4 (CachedPow)", gubkin.Gubkin3SuperFuncImplV4},
