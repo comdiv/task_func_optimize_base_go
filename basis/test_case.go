@@ -94,6 +94,13 @@ func SuperFuncBenchmark(impl SuperFuncType, b *testing.B) {
 	}
 }
 
+func SuperFuncTrueRandomBenchmark(impl SuperFuncType, b *testing.B, from int32, to int32) {
+	rnd := rand.New(rand.NewSource(213213123213213213))
+	for i := 0; i < b.N; i++ {
+		impl(rnd.Float64(), rnd.Float64(), uint8((rnd.Int31()%(to-from+1))+from))
+	}
+}
+
 //DefaultPrecession - максимальная допустимая погрешность по умолчанию - 0.1%
 var DefaultPrecession = 0.001
 

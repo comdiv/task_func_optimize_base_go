@@ -18,3 +18,8 @@ func BasicSuperFuncImpl(x1 float64, x2 float64, n uint8) float64 {
 		return BasicSuperFuncImpl(x1, x2, n-2) * BasicSuperFuncImpl(x1, x2, n-1)
 	}
 }
+
+type FuncDesc struct {
+	Name string
+	Impl SuperFuncType
+}
